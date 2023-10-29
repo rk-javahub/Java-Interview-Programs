@@ -2,6 +2,13 @@ package com.basic.demo;
 
 import java.util.Scanner;
 
+/**
+ * @author Rohit
+ * 
+ *         Logic : Execute code inside while loop as number>0 (i.e. 123)
+ *         remainder=number%10; number=number/10; reverse=reverse*10+remainder;
+ *
+ */
 public class ReverseNumber {
 	static int reverse(int num) {
 		int reminder = 0;

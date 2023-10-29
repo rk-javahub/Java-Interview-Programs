@@ -19,7 +19,7 @@ public class StringReverseDemo {
 		// Using Recursive Method
 		System.out.println(recursiveMethod(str)); // Output : avaJyM
 
-		// Using Swapping
+		// Using Swapping (Better performance O(n/2))
 		char[] ch = str.toCharArray();
 		char temp;
 		for (int i = 0, j = ch.length - 1; i < (ch.length / 2); i++, j--) {

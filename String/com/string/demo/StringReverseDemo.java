@@ -5,22 +5,29 @@ public class StringReverseDemo {
 	public static void main(String[] args) {
 		String str = "MyJava";
 
-		// 1. Using StringBuffer Class
-
+		// Using StringBuffer Class
 		StringBuffer sbf = new StringBuffer(str);
 		System.out.println(sbf.reverse()); // Output : avaJyM
 
-		// 2. Using iterative method
-
+		// Using iterative method
 		char[] strArray = str.toCharArray();
 		for (int i = strArray.length - 1; i >= 0; i--) {
 			System.out.print(strArray[i]); // Output : avaJyM
 		}
 		System.out.println();
 
-		// 3. Using Recursive Method
-
+		// Using Recursive Method
 		System.out.println(recursiveMethod(str)); // Output : avaJyM
+
+		// Using Swapping
+		char[] ch = str.toCharArray();
+		char temp;
+		for (int i = 0, j = ch.length - 1; i < (ch.length / 2); i++, j--) {
+			temp = ch[i];
+			ch[i] = ch[j];
+			ch[j] = temp;
+		}
+		System.out.println("After swapping " + new String(ch));
 
 	}
 
